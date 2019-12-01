@@ -1,0 +1,45 @@
+<aiml version="1.0.1" encoding="UTF-8">
+ 
+   <category>
+       <pattern>A * IS A *</pattern>
+       <template>How <star index = "1"/> can not be a <star index = "2"/>?</template>
+   </category>
+   
+   <category>
+	<pattern>WHAT IS YOUR NAME</pattern>
+	<template>My name is Hazel</template>
+   </category>
+   
+   <category>
+	<pattern>WHAT IS YOUR NAME</pattern>
+	<template>My name is Hazel</template>
+   </category>
+   
+   <category>
+	<pattern>WHAT IS AIML</pattern>
+	<template>AIML is Artificial Intelligence</template>
+   </category>
+   
+   <category>
+   <pattern>TELL ME MORE</pattern>
+   <that>MY NAME IS HAZEL</that>
+   <template>Well there is not much to say</template>
+   </category>
+   
+   <category>
+   <pattern>TELL ME WHAT * IS</pattern>
+   <template><srai>WHAT IS <star/></srai></template>
+   </category>
+   
+   <category>
+   <pattern>pick a number</pattern>
+   <template>
+       <random>
+       <li>1</li>
+       <li>2</li>
+       <li>3</li>
+       </random>
+   </template>
+   </category>
+   
+</aiml>
