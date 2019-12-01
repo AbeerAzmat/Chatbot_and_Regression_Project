@@ -1,0 +1,21 @@
+
+   <category>
+       <pattern>I* to *</pattern>
+       <template>I donot <star index = "1"/> to <star index = "2"/>?</template>
+   </category>
+   
+   <category>
+       <pattern>I * to *</pattern>
+       <template>Do I <star index = "1"/> to <star index = "2"/>?</template>
+   </category>
+   
+   <category>
+       <pattern>I am* to *</pattern>
+       <template>I am not <star index = "1"/> to <star index = "2"/>?</template>
+   </category>
+   
+   <category>
+       <pattern>I am* to *</pattern>
+       <template>Am I <star index = "1"/> to <star index = "2"/>?</template>
+   </category>
+   
