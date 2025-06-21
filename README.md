@@ -10,26 +10,28 @@ This project includes two mini applications:
 
 ├── aiml_files/
 
-│   ├── assignment.aiml
+├── assignment.aiml
 
-│   ├── basic_chat.aiml
+│── basic_chat.aiml
 
-│   ├── custom.aiml
+├── custom.aiml
 
-│   └── std-startup.xml
+│── std-startup.xml
 
-│
+
 ├── data/
 
-│   └── aids.csv
+│── aids.csv
 
-│
+
 ├── README.md 
 
 ├── chatbot.py
 
 ├── data_processing_assignment3.py
+
 ├── requirements.txt
+
 └── simple_linear_regression.py 
 
 
