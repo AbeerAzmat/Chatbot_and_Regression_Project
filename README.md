@@ -28,7 +28,7 @@ This project includes two mini applications:
 
 ├── chatbot.py
 
-├── data_processing_assignment3.py
+├── data_processing.py
 
 ├── requirements.txt
 
