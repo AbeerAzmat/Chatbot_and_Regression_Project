@@ -1,65 +1,60 @@
 <aiml version="1.0.1" encoding="UTF-8">
-<!-- basic_chat.aiml -->
+    <!-- aiml_files/basic_chat.aiml: Handles simple greetings and personal questions -->
 
+    <!-- Responds to the word "Hello" with a random greeting -->
     <category>
-        <pattern>Hello</pattern>
+        <pattern>HELLO</pattern>
         <template>
             <random>
-            <li>HELLO SIR</li> 
-            
-            <li>hi.</li>
-            <li>yes.</li>
-            <li>amm hii</li>
-            <li>hello.</li>
-            <li>yeah.</li>
-            <li>hi handsome</li>
-           
-        </random>
+                <li>HELLO SIR</li>
+                <li>hi.</li>
+                <li>yes.</li>
+                <li>amm hii</li>
+                <li>hello.</li>
+                <li>yeah.</li>
+                <li>hi handsome</li>
+            </random>
         </template>
     </category>
+
+    <!-- Responds to "hi" with a random greeting (same as above) -->
     <category>
-        <pattern>hi</pattern>
+        <pattern>HI</pattern>
         <template>
             <random>
-            <li>HELLO SIR</li> 
-            
-            <li>hi.</li>
-            <li>yes.</li>
-            <li>amm hii</li>
-            <li>hello.</li>
-            <li>yeah.</li>
-            <li>hi handsome</li>
-           
-        </random>
+                <li>HELLO SIR</li>
+                <li>hi.</li>
+                <li>yes.</li>
+                <li>amm hii</li>
+                <li>hello.</li>
+                <li>yeah.</li>
+                <li>hi handsome</li>
+            </random>
         </template>
     </category>
-    
-    
+
+    <!-- Responds to "Who are you?" -->
     <category>
-        <pattern>who are you?</pattern>
-        <template>
-            I'm a bot, silly!
-        </template>
-    </category>
-   <category>
-
-        <pattern> how are you</pattern>
-        <template>
-          i am fine what about you.
-        </template>
+        <pattern>WHO ARE YOU?</pattern>
+        <template>I'm a bot, silly!</template>
     </category>
 
- <category>
-        <pattern> me too</pattern>
-        <template>
-           oh great nice to talk with you
-        </template>
+    <!-- Responds to "How are you" -->
+    <category>
+        <pattern>HOW ARE YOU</pattern>
+        <template>I am fine, what about you?</template>
     </category>
-  <category>
-        <pattern> what is your age</pattern>
-        <template>
-         i am a chatbot i born today
-        </template>
+
+    <!-- Responds to "Me too" -->
+    <category>
+        <pattern>ME TOO</pattern>
+        <template>Oh great! Nice to talk with you.</template>
     </category>
-    
+
+    <!-- Responds to "What is your age" -->
+    <category>
+        <pattern>WHAT IS YOUR AGE</pattern>
+        <template>I am a chatbot. I was born today!</template>
+    </category>
+
 </aiml>
