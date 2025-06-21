@@ -1,47 +1,68 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Dec  3 22:22:04 2019
+# Simple Linear Regression Model
+# Author: Abeer Azmat
 
-@author: Abeer Azmat
-"""
-
-# Simple Linear Regression
-
-# Importing the libraries
+# -----------------------------
+# 1. Import Required Libraries
+# -----------------------------
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
-
-# Importing the dataset
-mydataset = pd.read_csv('aids.csv')
-X = mydataset.iloc[:, :-1].values
-y = mydataset.iloc[:, 1].values
-
-# Splitting the dataset into the Training set and Test set
+import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 1/3, random_state = 0)
-
-# Fitting Simple Linear Regression to the Training set
 from sklearn.linear_model import LinearRegression
+
+# -----------------------------
+# 2. Load the Dataset
+# -----------------------------
+# Make sure 'aids.csv' is placed inside the 'data/' folder
+data = pd.read_csv('data/aids.csv')  # Adjust path if needed
+
+# Assuming the dataset has two columns: [Year, Deaths]
+# X → feature (Year), y → target (Death count)
+X = data.iloc[:, :-1].values  # All rows, all columns except last
+y = data.iloc[:, -1].values   # All rows, last column (Deaths)
+
+# -----------------------------
+# 3. Split into Train and Test Sets
+# -----------------------------
+X_train, X_test, y_train, y_test = train_test_split(
+    X, y, test_size=1/3, random_state=0
+)
+
+# -----------------------------
+# 4. Train the Linear Regression Model
+# -----------------------------
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
-regressor.predict(X_test)
 
-# Predicting the Test set results
+# -----------------------------
+# 5. Predict on the Test Set
+# -----------------------------
 y_pred = regressor.predict(X_test)
 
-# Visualising the Training set results
-plt.scatter(X_train, y_train,color = 'yellow')
-plt.plot(X_train, regressor.predict(X_train), color = 'blue')
-plt.title('Death vs Years (Training set)')
-plt.xlabel('Years')
-plt.ylabel('Death')
+# -----------------------------
+# 6. Visualize Training Set Results
+# -----------------------------
+plt.figure(figsize=(8, 5))
+plt.scatter(X_train, y_train, color='orange', label='Training Data')
+plt.plot(X_train, regressor.predict(X_train), color='blue', label='Model Prediction')
+plt.title('Deaths vs Years (Training Set)')
+plt.xlabel('Year')
+plt.ylabel('Deaths')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
 plt.show()
 
-# Visualising the Test set results
-plt.scatter(X_test, y_test, color = 'green')
-plt.plot(X_train, regressor.predict(X_train), color = 'red')
-plt.title('Death vs Years (Test set)')
-plt.xlabel('Years')
-plt.ylabel('Death')
+# -----------------------------
+# 7. Visualize Test Set Results
+# -----------------------------
+plt.figure(figsize=(8, 5))
+plt.scatter(X_test, y_test, color='green', label='Test Data')
+plt.plot(X_train, regressor.predict(X_train), color='red', label='Trained Model')
+plt.title('Deaths vs Years (Test Set)')
+plt.xlabel('Year')
+plt.ylabel('Deaths')
+plt.legend()
+plt.grid(True)
+plt.tight_layout()
 plt.show()
