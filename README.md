@@ -1,16 +1,13 @@
  Chatbot + 📊 Linear Regression Project
+ 
 This project includes two mini applications:
 
-🤖 An AIML-based chatbot that responds to user input using pre-written conversation patterns.
+1. 🤖 An AIML-based chatbot that responds to user input using pre-written conversation patterns.
+2. 📈 A simple linear regression model that predicts and visualizes relationships between years and death counts using historical CSV data.
 
-📈 A simple linear regression model that predicts and visualizes relationships between years and death counts using historical CSV data.
 
 📁 Project Structure
-kotlin
-Copy
-Edit
-project_root/
-│
+
 ├── aiml_files/
 │   ├── assignment.aiml
 │   ├── basic_chat.aiml
@@ -20,83 +17,83 @@ project_root/
 ├── data/
 │   └── aids.csv
 │
+├── README.md 
 ├── chatbot.py
-├── simple_linear_regression.py
 ├── data_processing_assignment3.py
 ├── requirements.txt
-└── README.md
+└── simple_linear_regression.py 
+
+
 🤖 AIML Chatbot
+
 The chatbot uses AIML (Artificial Intelligence Markup Language) to simulate human-like conversations.
 
 How to Run the Chatbot
-Install dependencies:
+1. Install dependencies:
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
-Make sure AIML files are in the aiml_files/ folder.
+   pip install -r requirements.txt
+   
+2. Make sure AIML files are in the aiml_files/ folder.
 
-Run the chatbot:
+3. Run the chatbot:
 
-bash
-Copy
-Edit
-python chatbot.py
-Start chatting:
+   python chatbot.py
+   
+4. Start chatting:
 
-makefile
-Copy
-Edit
-You: hi
-Bot: hello.
+   You: hi
+   Bot: hello.
+
+   
 📈 Simple Linear Regression
 This module predicts death counts over time using a simple linear regression model with scikit-learn.
 
 How to Run the Regression
-Ensure aids.csv is in the data/ folder.
+1. Ensure aids.csv is in the data/ folder.
 
-Run the script:
+2. Run the script:
 
-bash
-Copy
-Edit
-python simple_linear_regression.py
-It will:
+   python simple_linear_regression.py
+   
+4. It will:
 
-Train the model on historical data
+ - Train the model on historical data
 
-Display two graphs:
+ - Display two graphs:
 
-Training data with regression line
+    -Training data with regression line
 
-Test data with prediction line
+    -Test data with prediction line
+
+   
 
 📦 Requirements
+
 Install all required packages using:
 
-bash
-Copy
-Edit
-pip install -r requirements.txt
+   pip install -r requirements.txt
+   
 requirements.txt
-Copy
-Edit
-python-aiml
-numpy
-pandas
-matplotlib
-scikit-learn
+
+   python-aiml
+   numpy
+   pandas
+   matplotlib
+   scikit-learn
+
+   
 📌 Optional: Improvements
-Add voice or speech recognition to chatbot
 
-Use real-world health data for regression
+   -Add voice or speech recognition to chatbot
 
-Save model predictions to file
+   -Use real-world health data for regression
 
-Expand AIML vocabulary
+   -Save model predictions to file
+
+   -Expand AIML vocabulary
+
 
 👩‍💻 Author
 Abeer Azmat
-This project is for learning purposes, combining Python AI tools and basic machine learning techniques.
 
+This project is for learning purposes, combining Python AI tools and basic machine learning techniques.
