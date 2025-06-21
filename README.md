@@ -9,16 +9,25 @@ This project includes two mini applications:
 📁 Project Structure
 
 ├── aiml_files/
+
 │   ├── assignment.aiml
+
 │   ├── basic_chat.aiml
+
 │   ├── custom.aiml
+
 │   └── std-startup.xml
+
 │
 ├── data/
+
 │   └── aids.csv
+
 │
 ├── README.md 
+
 ├── chatbot.py
+
 ├── data_processing_assignment3.py
 ├── requirements.txt
 └── simple_linear_regression.py 
