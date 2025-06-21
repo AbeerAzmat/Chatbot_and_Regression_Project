@@ -1,45 +1,55 @@
 <aiml version="1.0.1" encoding="UTF-8">
- 
-   <category>
-       <pattern>A * IS A *</pattern>
-       <template>How <star index = "1"/> can not be a <star index = "2"/>?</template>
-   </category>
-   
-   <category>
-	<pattern>WHAT IS YOUR NAME</pattern>
-	<template>My name is Hazel</template>
-   </category>
-   
-   <category>
-	<pattern>WHAT IS YOUR NAME</pattern>
-	<template>My name is Hazel</template>
-   </category>
-   
-   <category>
-	<pattern>WHAT IS AIML</pattern>
-	<template>AIML is Artificial Intelligence</template>
-   </category>
-   
-   <category>
-   <pattern>TELL ME MORE</pattern>
-   <that>MY NAME IS HAZEL</that>
-   <template>Well there is not much to say</template>
-   </category>
-   
-   <category>
-   <pattern>TELL ME WHAT * IS</pattern>
-   <template><srai>WHAT IS <star/></srai></template>
-   </category>
-   
-   <category>
-   <pattern>pick a number</pattern>
-   <template>
-       <random>
-       <li>1</li>
-       <li>2</li>
-       <li>3</li>
-       </random>
-   </template>
-   </category>
-   
+    <!-- Custom AIML patterns for chatbot responses -->
+
+    <!-- Match sentences like "A cat is a pet" -->
+    <category>
+        <pattern>A * IS A *</pattern>
+        <template>How <star index="1"/> can not be a <star index="2"/>?</template>
+    </category>
+
+    <!-- Respond to "What is your name" -->
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>My name is Hazel</template>
+    </category>
+
+    <!-- Duplicate pattern above (can be removed if not needed) -->
+    <category>
+        <pattern>WHAT IS YOUR NAME</pattern>
+        <template>My name is Hazel</template>
+    </category>
+
+    <!-- Respond to "What is AIML" -->
+    <category>
+        <pattern>WHAT IS AIML</pattern>
+        <template>AIML is Artificial Intelligence</template>
+    </category>
+
+    <!-- Only responds with "Well there is not much to say" 
+         if the last user input was "MY NAME IS HAZEL" -->
+    <category>
+        <pattern>TELL ME MORE</pattern>
+        <that>MY NAME IS HAZEL</that>
+        <template>Well there is not much to say</template>
+    </category>
+
+    <!-- Redirects "Tell me what X is" to "What is X" -->
+    <category>
+        <pattern>TELL ME WHAT * IS</pattern>
+        <template>
+            <srai>WHAT IS <star/></srai>
+        </template>
+    </category>
+
+    <!-- Respond with a random number between 1, 2, and 3 -->
+    <category>
+        <pattern>PICK A NUMBER</pattern>
+        <template>
+            <random>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+            </random>
+        </template>
+    </category>
 </aiml>
