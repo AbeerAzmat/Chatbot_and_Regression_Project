@@ -1,21 +1,28 @@
+<aiml version="1.0.1" encoding="UTF-8">
+    
+    <!-- Matches: "I want to learn", "I need to eat" -->
+    <category>
+        <pattern>I * TO *</pattern>
+        <template>Do I <star index="1"/> to <star index="2"/>?</template>
+    </category>
 
-   <category>
-       <pattern>I* to *</pattern>
-       <template>I donot <star index = "1"/> to <star index = "2"/>?</template>
-   </category>
-   
-   <category>
-       <pattern>I * to *</pattern>
-       <template>Do I <star index = "1"/> to <star index = "2"/>?</template>
-   </category>
-   
-   <category>
-       <pattern>I am* to *</pattern>
-       <template>I am not <star index = "1"/> to <star index = "2"/>?</template>
-   </category>
-   
-   <category>
-       <pattern>I am* to *</pattern>
-       <template>Am I <star index = "1"/> to <star index = "2"/>?</template>
-   </category>
-   
+    <!-- Matches: "Iwant to try", "Ineed to rest" (no space after 'I') -->
+    <category>
+        <pattern>I* TO *</pattern>
+        <template>I don’t <star index="1"/> to <star index="2"/>?</template>
+    </category>
+
+    <!-- Matches: "I am trying to understand", "I am ready to leave" -->
+    <category>
+        <pattern>I AM * TO *</pattern>
+        <template>I am not <star index="1"/> to <star index="2"/>?</template>
+    </category>
+
+    <!-- Alternate form for reflective questioning -->
+    <category>
+        <pattern>AM I * TO *</pattern>
+        <template>Are you <star index="1"/> to <star index="2"/>?</template>
+    </category>
+
+</aiml>
+
