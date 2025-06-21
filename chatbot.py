@@ -1,10 +1,24 @@
 import aiml
 
-# Create the kernel and learn AIML files
+# -----------------------------
+# AIML Chatbot Setup
+# -----------------------------
+# Create a new AIML kernel (chatbot engine)
 kernel = aiml.Kernel()
-kernel.learn("std-startup.xml")
-kernel.respond("load aiml b")
 
-# Press CTRL-C to break this loop
+# Load the startup AIML file
+kernel.learn("aiml_files/std-startup.xml")
+
+# Execute a command to load all AIML files from std-startup.xml
+kernel.respond("LOAD AIML B")
+
+print("Chatbot is ready! Type something to start chatting.")
+print("Press Ctrl+C to exit.\n")
+
+# -----------------------------
+# Chat Loop
+# -----------------------------
 while True:
-    print (kernel.respond(input("Enter your message >> ")))
+    user_input = input("You: ")
+    bot_response = kernel.respond(user_input)
+    print("Bot:", bot_response)
